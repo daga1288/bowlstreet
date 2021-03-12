@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BowlStreet</title>
+    <link rel="shortcut icon" href="/bowlstreet/img/logoBS.ico" />
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!--FONT OPEN SANS CONDENSED-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@586&display=swap" rel="stylesheet">    
+   <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"> <Link rel="stylesheet">
+
+</head>
+<body>
+<!--menu desplegable-->
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+<!--menu fijo-->
+   <div class="container"> 
+       <nav class="nav-main">
+           <img src="img/logoBS.png" alt="LOGO BowlStreet" class="nav-brand">
+       <ul class="nav-menu">
+        <a href="#"><img src="img/copia de copia de bowlstreet2.png" alt="LOGO BowlStreet" class="mini-brand"> </a>
+          
+        <li class="menu1"> 
+               <a href=#Promociones class="menua">
+                <Span class="menuT"><i class="fab fa-elementor"></i> Menu</Span></a>
+        <li>
+            <a href=#nosotros class="boton2">
+            <i class="fas fa-users"></i> Nosotros</a>
+        </li>
+        <li>
+            <a href=#contacto><i class="fas fa-mobile-alt"></i> Contacto</a>
+        </li>
+       </ul>
+        </nav>
+   </div>
+
+ <!--nosotros-->
+<header class="showcase" id="nosotros"> 
+    <Div class="nosotrosbs">
+    <div class="nosotrosbshead"><h1>NOSOTROS</h1></div>
+    <div class="nosotrosbsbody"><h2>
+    En BowlStreet nos preocupamos por ofrecerte una excelente propuesta.
+    Con productos elaborados con materia prima de alta calidad.
+    contamos con la mas moderna tecnologia para la elaboracion de nuestro productos.
+    permitiendonos entregar exquisitos sabores que haran de tus comidas unicas, ya sea con
+    una de nuestras creaciones o si te prefieres haciendo tu platillo unico
+    </h2> </div>
+    <div class="nosotrosbsfoot"><h3> GRACIAS POR ELEGIR BowlStreet</h3></div>
+     </Div>
+ </header>
+
+<!--Promociones-->
+<div class="PROMOCIONES" id="Promociones">
+    <section>
+        <ul>
+            <li class="list active" data-filter="all">all</li>
+            <li class="list" data-filter="poke1">poke1</li>
+            <li class="list" data-filter="poke2">poke2</li>
+            <li class="list" data-filter="poke3">poke3</li>
+            <li class="list" data-filter="poke4">poke4</li>
+            <li class="list" data-filter="poke5">poke5</li>
+        </ul>
+        <div class="product">
+            <div class="itembox poke1">  <img src="img/1.png"> </div>
+            <div class="itembox poke2">  <img src="img/2.png"> </div>
+            <div class="itembox poke3">  <img src="img/3.png"> </div>
+            <div class="itembox poke4">  <img src="img/4.png"> </div>
+            <div class="itembox poke5">  <img src="img/5.png"> </div>
+
+            <div class="itembox poke1">  <img src="img/1.png"> </div>
+            <div class="itembox poke2">  <img src="img/2.png"> </div>
+            <div class="itembox poke3">  <img src="img/3.png"> </div>
+            <div class="itembox poke4">  <img src="img/4.png"> </div>
+            <div class="itembox poke5">  <img src="img/5.png"> </div>
+
+            <div class="itembox poke1">  <img src="img/1.png"> </div>
+            <div class="itembox poke2">  <img src="img/2.png"> </div>
+            <div class="itembox poke3">  <img src="img/3.png"> </div>
+            <div class="itembox poke4">  <img src="img/4.png"> </div>
+            <div class="itembox poke5">  <img src="img/5.png"> </div>
+
+            <div class="itembox poke1">  <img src="img/1.png"> </div>
+            <div class="itembox poke2">  <img src="img/2.png"> </div>
+            <div class="itembox poke3">  <img src="img/3.png"> </div>
+            <div class="itembox poke4">  <img src="img/4.png"> </div>
+            <div class="itembox poke5">  <img src="img/5.png"> </div>
+        </div>
+    </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script
+    type="text/javascript">$(document).ready(function(){
+        $('.list').click(function(){
+            const value = $(this).attr('data-filter');
+            if (value == 'all'){
+                $('.itembox').show('1000');
+            }
+            else{
+                $('.itembox').not('.'+value).hide('1000')
+                $('.itembox').filter('.'+value).show('1000')
+            }
+        })
+        //add active class on a selected item
+        $('.list') .click(function(){ 
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+     }) 
+    </script>    
+</div> 
+
+<!--Contacto-->
+<section class="Banner1" id="contacto">
+<div class="content">
+        <h2>estamos ubicados</h2>
+        
+ <!-- googlemaps -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97048.17077225563!2d-3.961517108764514!3d40.52489859382526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418326b68ad23f%3A0x40340f3be4cdec0!2sLas%20Rozas%20de%20Madrid%2C%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1611142907537!5m2!1ses-419!2sar" width="1300" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+ <!-- SnapWidget -->
+<iframe src="https://snapwidget.com/embed/921340" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:480px; height:160px"></iframe>
+</div>
+</section> 
+
+ <section class="Social">
+ <p>Follow BowlStreet</p>
+ <div class="links">
+     <a href="#">
+         <i class="fab fa-facebook-f"></i>
+     </a>
+     <a href="#">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#">
+        <i class="fab fa-instagram"></i>
+    </a>
+ </div>    
+ </section> 
+
+<!--SCROLLREVEAL-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!--CUSTOM JS-->
+<script src="main.js"></script>
+</body>
+</html>

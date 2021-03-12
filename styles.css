@@ -3,7 +3,7 @@
     margin: 0;
 }
 body {
-    background: white;
+    background:black;
     font-size: 30px;
     text-transform: uppercase;
     text-align: justify;
@@ -21,16 +21,11 @@ a {
 ul{
     list-style: none;
     }
-    
-hr{ padding: 5px;
-    margin:5px 0;
-
-}
 /* Navigation*/
 
 .nav-main { 
     background:url(img/imagen\ fondo1.png) no-repeat center;
-    height: 30%;  
+    height: 800px;  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +46,7 @@ hr{ padding: 5px;
     height: 100px;
     width: 100%;
     position: fixed;
+    z-index: 9999;
 }
 .listaA{
     width: 200px;
@@ -69,19 +65,6 @@ hr{ padding: 5px;
     position: relative;
 }
 
-    .down-item{
-        width:100%;
-        height:0;
-        top: 100%;
-        position: absolute;
-        right: 0;
-        left: 0;
-        display: flex;
-        flex-direction:row;
-        justify-content: center;
-        
-    }
-
 .nav-main ul{ 
 display: flex;
 align-items: center;
@@ -97,7 +80,7 @@ justify-content: space-evenly;
     cursor: pointer;
     top: 25;
     right: 30px;
-    z-index: 2;
+    z-index: 9999;
     font-size: 3rem;
     display: none;
 }
@@ -122,17 +105,7 @@ justify-content: space-evenly;
     background: coral;
     color: cornsilk;
 }
-.showcase{
-    padding: 40px;
-    width: 100%;
-    height: 600px;
-    background: url(img/animacion.jpg) center/cover;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
+
 .btn{
     cursor:pointer;
     display: inline-block;
@@ -148,40 +121,89 @@ justify-content: space-evenly;
     opacity: .7;
 }
     
-/*PROMOCIONES*/
-.PROMOCIONES{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-    background:url(img/imagen\ fondo1.png) center;
-}
-.PROMOCIONES img{
+/*nosotrosBS*/
+.nosotrosbs {
+    background:url(img/imagen\ fondo1.png) no-repeat center;
+    text-align: center;
+    font-size: 1rem;
+    height: 800px;
     width: 100%;
+    padding-top: 80px;   
+    padding-bottom: 80px;
+    color: bisque;
+    transform: scaleX(-1);
+}
+.nosotrosbshead {
+    padding: 3rem;
+    font-size: 2rem;
+    transform: scaleX(-1);
+ }
+
+ .nosotrosbsbody {
+     width: 600px;
+    font-size: 1rem;
+    margin-left: auto; 
+     margin-right: auto;
+     text-align: center;
+     transform: scaleX(-1);
+ }
+
+ .nosotrosbsfoot {
+    padding-top: 2rem;
+    margin-left: auto; 
+     margin-right: auto;
+     transform: scaleX(-1);
+
+ }
+
+/*PROMOCIONES*/
+section{
+    padding-top: 120px;
+    width: 100%;
+    margin: auto;
+    background: black;
+}
+
+section ul{
+    display: flex;
+    align-items: center;
+justify-content: space-evenly;
+
+}
+
+section ul li{
+    list-style: none;
+    background: #eee;
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+section ul li.active {
+    background: #03a9f4;
+    color: #fff;
+}
+.product {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product .itembox{
+    position: relative;
+    width: 200px;
     height: 200px;
-    padding-top: 20px;
+    margin: 5px;
 }
-.PROMOCIONES a{
-    cursor:pointer;
-    display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px;
-    border:1px solid black;
-    border-style: groove;
-    margin:10px 0;
-    }
-.PROMOCIONES a:hover{
-    opacity: .7;
+.product .itembox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.PROMOCIONES h3{
-    font-size: 50px;
-    text-align: center;
-}
-.PROMOCIONES p{
-    text-align: center;
-    font-size: 15px;
-    padding:10px
-}
+
+
+
 .color2 {
     color:#000000; 
 
@@ -196,26 +218,28 @@ justify-content: space-evenly;
 
 /*Banner1*/
 .Banner1 h2{
-    padding-bottom: 10px;
+    color: bisque;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
 }
 .Banner1 {
-    background: url(./img/pavimento.jpg) no-repeat center/cover;
+    background:url(img/imagen\ fondo1.png) no-repeat center;
     width: 100%;
     display: inline-block;
     text-align: center;
     justify-content: space-between;
-    height: 620px;
-    padding: 25px 25px;
+    height: 800px;
     border:1px solid gray;
     margin:10px 0;
  }
  .Banner1 iframe {
         max-width: 100%;
-        height: 450px;
+        height: 300px; margin-bottom: 1rem;
        }
  /*Social*/
  .Social {
-     padding-bottom: 20px;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
      background:url(img/menufondo.png) no-repeat center;
  }
  .Social p {
@@ -237,13 +261,20 @@ justify-content: space-evenly;
     font-size: 3rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
+
+    section ul{
+        display: flex;
+        align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    }
     .menu-btn {
         color: #ffb40e;
         display: block;
         position: fixed;}
     .nav-brand{
-        display: flex;
+       display: flex;
        justify-content: center;
        align-items: center;
     }
@@ -251,19 +282,27 @@ justify-content: space-evenly;
     .nav-menu{
         line-height: 90px;
     }
+    .mini-brand{
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        margin-left: 180px;
+    }
 
 .nav-main ul.nav-menu{
         display: block;
         position: fixed;
         background-color: black;
         text-align: center;
+        margin-left: 20px;
         height: 100%;
+        width: 50%;
         opacity: .8;
-        transform: translate(-750px);
+        transform: translate(-950px);
         transition: transform .5s ease-in-out;
 }
 .nav-main ul.nav-menu.show {
-    transform: translate(-20px);}
+    transform: translate(-350px);}
 
 .PROMOCIONES {
     grid-template-columns:repeat(1, 2fr)}
@@ -278,4 +317,11 @@ justify-content: space-evenly;
     body{ background-color: rgb(0, 0, 0);}
     .showcase{
         font-size: 12px;}
+
+        section ul{
+            display: flex;
+            align-items: center;
+        justify-content: space-evenly;
+        font-size: 10px;
+        }
 }
